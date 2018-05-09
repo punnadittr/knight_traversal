@@ -1,7 +1,7 @@
 class Node
   attr_accessor :children, :position, :parent
 
-  def initialize(position = [3,4], parent = nil)
+  def initialize(position, parent = nil)
     @position = position
     @parent = parent
     @children = []
@@ -91,6 +91,4 @@ end
 
 mytree = Tree.new
 #test
-1000.times do
-  mytree.knight_moves([rand(0..7),rand(0..7)], [rand(0..7),rand(0..7)])
-end
+mytree.knight_moves([rand(0..7),rand(0..7)], [rand(0..7),rand(0..7)])
